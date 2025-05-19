@@ -1,0 +1,102 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white-background: #ccc;
+  --white-color: #fff;
+  --todo-container: rgb(142, 142, 206);
+  --adding-btn-background: rgb(173, 217, 235);
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-background);
+}
+
+#app-heading {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+
+.to-do-description {
+  font-size: 0.9rem;
+  margin-bottom: 1.3rem;
+}
+
+.to-do-description::after {
+  content: '!';
+}
+
+#to-do-app {
+  height: 300px;
+  background-color: var(--todo-container);
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 1px 1px 3px 1px #252525b0;
+
+  #todo {
+    margin-top: 1.2rem;
+    list-style-type: none;
+    width: 100%;
+    li {
+      width: 100%;
+      /* border: 1px solid black; */
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      label {
+        font-size: 0.8rem;
+        align-self: flex-start;
+        margin-right: 2.7rem;
+      }
+
+      label.checked {
+        text-decoration: line-through;
+      }
+    }
+    li + li {
+      margin-top: 0.2rem;
+    }
+  }
+
+}
+
+#button-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .adding-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--adding-btn-background);
+    color: var(--white-color);
+    position: relative;
+    bottom: 20px;
+    box-shadow: 1px 1px 1px 1px #2525258a;
+  }
+}
+
