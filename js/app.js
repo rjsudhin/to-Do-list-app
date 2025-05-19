@@ -4,7 +4,7 @@ const userInput = document.querySelector('#user-input')
 
 
 // adding new wish
-addingBtn.addEventListener('mousedown', () => {
+addingBtn.addEventListener('click', () => {
   if (userInput.value.length <= 20 && userInput.value != '') {
     if (toDo.childElementCount < 5) {
       // creating a li element for contain
