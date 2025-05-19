@@ -53,10 +53,22 @@ body {
   justify-content: flex-start;
   box-shadow: 1px 1px 3px 1px #252525b0;
 
+  #user-input {
+    width: 200px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #e0dddd;
+    padding-left: 0.5rem;
+    color: rgb(252, 245, 245);
+    outline: none;
+  }
   #todo {
-    margin-top: 1.2rem;
+    margin-top: 3rem;
     list-style-type: none;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     li {
       width: 100%;
       /* border: 1px solid black; */
@@ -64,10 +76,16 @@ body {
       justify-content: space-between;
       gap: 1rem;
       align-items: center;
+
+      input[type='checkbox'] {
+        accent-color: var(--white-background);
+      }
+
       label {
         font-size: 0.8rem;
         align-self: flex-start;
         margin-right: 2.7rem;
+        color: var(--white-color);
       }
 
       label.checked {
@@ -90,9 +108,11 @@ body {
   .adding-btn {
     width: 50px;
     height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
     border-radius: 50%;
     border: none;
-    background-color: var(--adding-btn-background);
+    background: linear-gradient(230deg, rgb(159, 217, 240), rgb(149, 149, 204));
     color: var(--white-color);
     position: relative;
     bottom: 20px;
